@@ -31,6 +31,12 @@
 ;; `elisp/` is not in the control of el-get
 (add-to-load-path "elisp")
 
+
+;; use-package
+;; https://github.com/jwiegley/use-package
+(el-get-bundle use-package)
+
+
 ;; init-loader
 ;; 0* : core & global configs
 ;; 1* : utilities
