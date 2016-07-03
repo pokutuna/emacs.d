@@ -3,4 +3,5 @@
 set -x
 HERE=$(cd $(dirname $0); pwd)
 
-ln -s $HERE $HOME/.emacs.d
+ln -sn $HERE $HOME/.emacs.d
+ln -sn $HOME/Dropbox/etc_emacs $HERE/etc

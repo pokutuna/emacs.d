@@ -54,7 +54,22 @@
 
 (add-hook 'before-save-hook
           '(lambda ()
-	     (delete-trailing-whitespace-with-exclude-pattern)
-	     (my-delete-trailing-blank-lines)
-	     (delete-file-if-no-contents)
-	     ))
+             (delete-trailing-whitespace-with-exclude-pattern)
+             (my-delete-trailing-blank-lines)
+             (delete-file-if-no-contents)
+             ))
+
+
+;; Shebang があるとき自動的に chmod +x する
+(add-hook 'after-save-hook
+          'executable-make-buffer-file-executable-if-script-p)
+
+
+;; 一時的に保存後に実行するシェルコマンドを追加する
+(defun temp-shell-command-after-save ()
+  (interactive)
+  (let* command-to-exec
+    (setq command-to-exec (read-input "shell-command: "))
+    (add-hook 'after-save-hook '(lambda () (shell-command command-to-exec)) nil t)
+    (princ (format "Shell-command `%s` will run when after saving this buffer." command-to-exec))
+    ))

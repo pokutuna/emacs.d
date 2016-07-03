@@ -76,12 +76,26 @@
   #'(lambda (arg) (interactive "p") (other-window (- arg))))
 
 
-;; 同じファイル名のバッファをわかりやすくする
-(use-package uniquify
-  :config
-  (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-  (setq uniquify-ignore-buffers-re "*[^*]+*")
-  )
+;;; split-window-n
+(defun split-window-vertically-n (num)
+  (interactive "n split: ")
+  (if (= num 2)
+      (split-window-vertically)
+    (progn
+      (split-window-vertically (- (window-height) (/ (window-height) num)))
+      (split-window-vertically-n (- num 1)))
+    ))
+
+(defun split-window-horizontally-n (num)
+  (interactive "n split: ")
+  (if (= num 2)
+      (split-window-horizontally)
+    (progn
+      (split-window-horizontally (- (window-width) (/ (window-width) num)))
+      (split-window-horizontally-n (- num 1)))
+    ))
+
+(global-set-key (kbd "C-x 4") (lambda () (interactive) (split-window-horizontally-n 3)))
 
 
 ;; emacs終了時に確認メッセージを出す。
