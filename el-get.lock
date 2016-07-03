@@ -1,5 +1,8 @@
 (setq el-get-lock-package-versions
-      '((tramp :checksum "98ab7b9ff9a4e8b696289815221467eee8a7ea6f")
+      '((auto-complete :checksum "08af29236e686c876ac7a45670562f3487ff02e0")
+        (popup :checksum "441ee40515038de3680768930157fce667ba872a")
+        (fuzzy :checksum "534d723ad2e06322ff8d9bd0ba4863d243f698e7")
+        (tramp :checksum "98ab7b9ff9a4e8b696289815221467eee8a7ea6f")
         (direx :checksum "9497231cf50767987494718db073731b05a4f970")
         (point-undo :checksum "b09bdcc64a0de08bae0838ef708c679dbc08f4c2")
         (undo-tree :checksum "a3e81b682053a81e082139300ef0a913a7a610a2")
