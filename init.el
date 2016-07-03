@@ -34,6 +34,7 @@
 
 ;; use-package
 ;; https://github.com/jwiegley/use-package
+;; http://qiita.com/kai2nenobu/items/5dfae3767514584f5220
 (el-get-bundle use-package)
 
 
