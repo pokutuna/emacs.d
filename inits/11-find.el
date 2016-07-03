@@ -18,8 +18,7 @@
 (el-get-bundle migemo)
 (use-package migemo
   :if (executable-find "cmigemo")
-  :commands (migemo-init)
-  :init
+  :config
   (setq migemo-command "cmigemo")
   (setq migemo-options '("-q" "--emacs" "-i" "\a"))
   (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")

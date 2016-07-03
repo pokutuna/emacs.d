@@ -12,11 +12,12 @@
 (setq cua-enable-cua-keys nil)
 
 ;; mark-multiple
-(el-get-bundle mark-multiple
-  (global-set-key (kbd "C-<") 'mark-previous-like-this)
-  (global-set-key (kbd "C->") 'mark-next-like-this)
-  (global-set-key (kbd "C-M-m") 'mark-more-like-this)
-  (global-set-key (kbd "C-*") 'mark-all-like-this)
+(el-get-bundle mark-multiple)
+(use-package mark-multiple
+  :bind (("C-<"   . mark-previous-like-this)
+         ("C->"   . mark-next-like-this)
+         ("C-M-m" . mark-more-like-this)
+         ("C-*"   . mark-all-like-this))
   )
 
 ;; bookmark 保存先
@@ -43,9 +44,11 @@
 
 
 ;; open-junk-file
-(el-get-bundle open-junk-file
+(el-get-bundle open-junk-file)
+(use-package open-junk-file
+  :bind (("C-x C-z" . open-junk-file))
+  :config
   (setq open-junk-file-format (locate-user-emacs-file "etc/junk/%Y/%m/%d-%H%M%S."))
-  (global-set-key (kbd "C-x C-z") 'open-junk-file)
 )
 
 ;; pyong-pyong.el
@@ -59,9 +62,10 @@
 (use-package jikanwari)
 
 ;; dash-at-point.el
-(el-get-bundle dash-at-point
-  (global-set-key (kbd "C-c d") 'dash-at-point)
-  (global-set-key (kbd "C-c e") 'dash-at-point-with-docset)
+(el-get-bundle dash-at-point)
+(use-package dash-at-point
+  :bind (("C-c d" . dash-at-point)
+         ("C-c e" . dash-at-point-with-docset))
 )
 
 ;; git-gutter-fringe

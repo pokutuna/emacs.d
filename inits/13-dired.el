@@ -12,7 +12,7 @@
 (use-package direx
   :commands (my:direx-iikanzi)
   :bind (( "C-x C-j" . my:direx-iikanzi))
-  :init
+  :config
   (require 'direx-project)
   (defun my:direx-iikanzi ()
     (interactive)
@@ -25,6 +25,6 @@
 
 ;; tramp
 (use-package tramp
-  :init
+  :config
   (setq tramp-default-method "ssh")
   (setq tramp-shell-prompt-pattern "^.*[#$%>] *"))

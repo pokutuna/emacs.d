@@ -8,9 +8,11 @@
 
 ;; undo-tree
 ;; C-x u で履歴を視覚化したバッファが出る
-(el-get-bundle undo-tree
+(el-get-bundle undo-tree)
+(use-package undo-tree
+  :bind (("C-'" . redo)) ;; redo は undo-tree で提供される
+  :config
   (global-undo-tree-mode)
-  (global-set-key (kbd "C-'") 'redo) ;; redo は undo-tree で提供される
 )
 
 ;; point-undo

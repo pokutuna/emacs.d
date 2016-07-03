@@ -5,7 +5,7 @@
 ;;; color-theme
 (el-get-bundle color-theme)
 (use-package color-theme
-  :init
+  :config
   (color-theme-initialize)
   (color-theme-gnome2)
   (set-face-foreground 'highlight nil)
@@ -34,7 +34,7 @@
 ;; カーソル縦軸ハイライト
 (el-get-bundle col-highlight)
 (use-package col-highlight
-  :init
+  :config
   (col-highlight-set-interval 1)
   (col-highlight-toggle-when-idle t)
   (setq col-highlight-face 'my-hl-line)
