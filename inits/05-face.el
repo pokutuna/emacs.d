@@ -7,9 +7,11 @@
 (use-package color-theme
   :config
   (color-theme-initialize)
-  (color-theme-gnome2)
-  (set-face-foreground 'highlight nil)
-  (set-face-background 'highlight "DarkCyan")
+
+  (when (window-system)
+    (color-theme-gnome2)
+    (set-face-foreground 'highlight nil)
+    (set-face-background 'highlight "DarkCyan"))
 
   ;; themeの背景に応じたカーソル行強調
   (defface my-hl-line

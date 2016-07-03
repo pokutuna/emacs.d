@@ -49,7 +49,6 @@
 ;; company
 ;; auto-complete メインで使う
 ;; 最近のプログラミング言語サポート package は company を要求することがあるので補助的に使う
-;; TODO 動作確認
 (el-get-bundle company)
 (use-package company
   :bind (:map company-mode-map
