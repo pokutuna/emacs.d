@@ -55,7 +55,8 @@
           ))
 
   ;; helm 内で migemo を有効にする
-  (helm-migemo-mode)
+  (when (executable-find "cmigemo")
+    (helm-migemo-mode))
   )
 
 ;; helm-descbinds
