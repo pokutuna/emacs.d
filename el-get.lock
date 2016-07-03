@@ -1,5 +1,7 @@
 (setq el-get-lock-package-versions
-      '((helm-git-files-el :checksum "281bdb69e744789898be220ad3e15531abd72b6f")
+      '((smartparens :checksum "89e9833827f02880a2a0ae8a50b9c73ad654b879")
+        (smartchr :checksum "964ba0ce5f81dec65d5039781ce0c12183748c94")
+        (helm-git-files-el :checksum "281bdb69e744789898be220ad3e15531abd72b6f")
         (helm-ag :checksum "51de5568ca65baa9f1a3e22c8cad9d7dda4fb6c5")
         (helm-descbinds :checksum "b4ad76372a1b9f4415322d210b3888423247693d")
         (helm :checksum "151ae12d7048934b58cf3ff0afe2262208dbd07d")

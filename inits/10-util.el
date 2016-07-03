@@ -75,3 +75,9 @@
 
 ;; magit
 (el-get-bundle magit)
+
+;; jaunte.el
+(el-get-bundle jaunte)
+(use-package jaunte
+  :bind (("C-c C-j" . jaunte)
+         ("M-z" . jaunte)))
