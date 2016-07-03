@@ -1,5 +1,6 @@
 ;;;; auto-complete.el
 
+;; auto-complete.el
 (el-get-bundle auto-complete)
 (use-package auto-complete
   :bind (("M-i" . auto-complete)
@@ -43,3 +44,40 @@
   (defun ac-complete-look () (interactive) (auto-complete '(ac-source-look)))
   (defvar ac-source-look '((candidates . my-ac-look) (requires . 2)))
   )
+
+
+;; company
+;; auto-complete メインで使う
+;; 最近のプログラミング言語サポート package は company を要求することがあるので補助的に使う
+;; TODO 動作確認
+(el-get-bundle company)
+(use-package company
+  :bind (:map company-mode-map
+         ("M-i" . company-complete)
+         :map company-active-map
+         ("C-h" . nil)
+         ("<tab>" . company-complete-common-or-cycle)
+         ("M-d" . company-show-doc-buffer))
+
+  :init
+  ;; faces like auto-complete.el
+  ;; http://qiita.com/wh11e7rue/items/6ffe27797c3eac13b67e
+  (add-hook
+   'company-mode-hook
+   '(lambda ()
+      (copy-face 'popup-menu-face 'company-tooltip)
+      (copy-face 'popup-menu-face 'company-tooltip-common)
+      (copy-face 'popup-menu-selection-face 'company-tooltip-selection)
+      (copy-face 'popup-menu-selection-face 'company-tooltip-common-selection)
+      (copy-face 'popup-menu-summary-face 'company-tooltip-annotation)
+      (copy-face 'popup-menu-selection-face 'company-tooltip-annotation-selection)
+      (copy-face 'popup-scroll-bar-background-face 'company-scrollbar-bg)
+      (copy-face 'popup-scroll-bar-foreground-face 'company-scrollbar-fg)
+      (copy-face 'ac-completion-face 'company-preview)
+      (copy-face 'ac-completion-face 'company-preview-common)
+      ))
+
+  :config
+  (setq company-minimum-prefix-length 1)
+  (setq company-selection-wrap-around t)
+)
