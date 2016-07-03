@@ -1,5 +1,10 @@
 (setq el-get-lock-package-versions
-      '((migemo :checksum "c2240afa9afc0f003bb1d846710505e8e8e38169")
+      '((tramp :checksum "98ab7b9ff9a4e8b696289815221467eee8a7ea6f")
+        (direx :checksum "9497231cf50767987494718db073731b05a4f970")
+        (point-undo :checksum "b09bdcc64a0de08bae0838ef708c679dbc08f4c2")
+        (undo-tree :checksum "a3e81b682053a81e082139300ef0a913a7a610a2")
+        (undohist :checksum "d2239a5f736724ceb9e3b6bcaa86f4064805cda0")
+        (migemo :checksum "c2240afa9afc0f003bb1d846710505e8e8e38169")
         (grep-edit :checksum "b0398c6b72ed50858385797c300c512603ebbc3b")
         (magit :checksum "5f57495f65fea169282b23233f87c4af07a60e4c")
         (dash :checksum "502be58722262c5b9d779848a168b0dc67ee7471")

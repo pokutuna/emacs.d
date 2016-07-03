@@ -1,5 +1,7 @@
 *.elc
 places
 etc
+tramp
 el-get/
 backup/
+undohist/

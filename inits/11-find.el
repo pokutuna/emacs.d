@@ -18,10 +18,11 @@
 (el-get-bundle migemo)
 (use-package migemo
   :if (executable-find "cmigemo")
+  :commands (migemo-init)
   :init
   (setq migemo-command "cmigemo")
   (setq migemo-options '("-q" "--emacs" "-i" "\a"))
-  (setq migemo-dictionary (expand-file-name "~/.emacs.d/etc/migemo/migemo-dict"))
+  (setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
   (setq migemo-user-dictionary nil)
   (setq migemo-regex-dictionary nil)
   (setq migemo-user-pattern-alist t)
