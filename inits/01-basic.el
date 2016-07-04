@@ -13,7 +13,7 @@
 (display-time) ;時刻表示
 (column-number-mode t) ;バーにカーソル位置表示
 (blink-cursor-mode t) ;カーソル点滅
-(global-linum-mode t) ;行番号表示
+; (global-linum-mode t) ;行番号表示
 (setq line-move-visual t) ; 物理行移動
 (delete-selection-mode 1) ;リージョンをC-hで削除
 (setq gc-cons-threshold (* 10 gc-cons-threshold)) ; GCを減らして軽くする
