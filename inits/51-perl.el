@@ -9,7 +9,9 @@
          ("\\.PL$" . cperl-mode)
          ("\\.t$" . cperl-mode)
          ("\\.psgi$" . cperl-mode)
-         ("cpanfile" . cperl-mode))
+         ("cpanfile" . cperl-mode)
+         ("\\.def" . cperl-mode) ; api schema
+         )
   :config
   (setq cperl-indent-level 4
         cperl-continued-statement-offset 4
