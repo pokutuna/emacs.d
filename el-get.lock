@@ -1,5 +1,8 @@
 (setq el-get-lock-package-versions
-      '((exec-path-from-shell :checksum "c2ca275d3243e8253513ced73e3ac21dc352e303")
+      '((cperl-mode-without-mode-compile :checksum "4f9bde79b53fc3ab893fd8d3a67f4cf6a916f609")
+        (el-get-lock :checksum "5a6c7d4eddaaf1402e9344e30628a3e57affeb54")
+        (el-get :checksum "78e8d27fc2b556e53451e64291f4a1c5fe5bcce0")
+        (exec-path-from-shell :checksum "c2ca275d3243e8253513ced73e3ac21dc352e303")
         (less-css-mode :checksum "d59a3ff4031ae75fbbe77b6cfce7843205394c28")
         (scss-mode :checksum "b010d134f499c4b4ad33fe8a669a81e9a531b0b2")
         (markdown-mode :checksum "c5f9265edf698017e64c69e32fb1d137a7bfc39e")

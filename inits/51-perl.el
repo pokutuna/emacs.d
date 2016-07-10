@@ -2,6 +2,12 @@
 
 (defalias 'perl-mode 'cperl-mode)
 
+;; mode-compile.el is unmaintained & not found emacsmirror
+(el-get-bundle cperl-mode-without-mode-compile
+  :url "https://github.com/jrockway/cperl-mode.git"
+  :provide cperl-mode
+  :post-init (defalias 'perl-mode 'cperl-mode))
+
 (use-package cperl-mode
   :interpreter "perl"
   :mode (("\\.pl$" . cperl-mode)
