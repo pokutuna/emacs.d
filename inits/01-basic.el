@@ -98,6 +98,10 @@
 (global-set-key (kbd "C-x 4") (lambda () (interactive) (split-window-horizontally-n 3)))
 
 
+;; ファイルが更新されていたらバッファを自動で再読み込み
+(global-reveal-mode 1)
+
+
 ;; emacs終了時に確認メッセージを出す。
 ;; http://blog.livedoor.jp/techblog/archives/64599359.html
 (defadvice save-buffers-kill-emacs
