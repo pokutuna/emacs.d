@@ -4,9 +4,11 @@
 ;; web-mode
 (el-get-bundle web-mode)
 (use-package web-mode
-  :mode (("\\.html?$" . web-mode))
+  :mode (("\\.html?$" . web-mode)
+         ("\\.tx$" . web-mode))
   :config
-  (setq web-mode-engines-alist '(("template-toolkit" . "\\.html?\\'" )))
+  (setq web-mode-engines-alist
+        '(("template-toolkit" . "\\.html?\\'" )))
   (setq web-mode-markup-indent-offset 2)
   )
 
