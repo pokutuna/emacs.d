@@ -99,7 +99,7 @@
 
 
 ;; ファイルが更新されていたらバッファを自動で再読み込み
-(global-reveal-mode 1)
+(global-auto-revert-mode 1)
 
 
 ;; emacs終了時に確認メッセージを出す。
