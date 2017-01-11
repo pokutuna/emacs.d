@@ -72,7 +72,8 @@
   :bind (("C-M-o" . helm-do-ag)
          ("C-S-o" . helm-do-ag-buffers)))
 
-;; helm-git-files
-(el-get-bundle tarao/helm-git-files-el :depends helm)
-(use-package helm-git-files
-         :bind (("C-M-;" . helm-git-files)))
+;; helm-ls-git
+(el-get-bundle helm-ls-git :depends helm)
+(use-package helm-ls-git
+  :bind (("C-M-;"   . helm-ls-git-ls)
+         ("C-x C-d" . helm-browse-project)))

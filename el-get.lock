@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((cperl-mode :checksum "4f9bde79b53fc3ab893fd8d3a67f4cf6a916f609")
+      '((helm-ls-git :checksum "98ce7dc709cf1468a50de18e96c028baa7f4357d")
+        (cperl-mode :checksum "4f9bde79b53fc3ab893fd8d3a67f4cf6a916f609")
         (ag :checksum "754d0fea35059c583b9613c7924cebba74fe1319")
         (mode-compile :checksum "5c30fe052bb99de591c1240523224ecf21f933af")
         (s :checksum "fc395c8d5e6c14d5e0920ab80d4d5df007eed14a")
@@ -32,7 +33,6 @@
         (json-mode :checksum "e8ba0c03c5c10f61b8f0b3f5d531ef1d80dec9b0")
         (js2-mode :checksum "8569ba6734184b869b4ac42e79231d195ea4dba2")
         (init-loader :checksum "287da99eadfa3dd85492506db43d68324069b593")
-        (helm-git-files-el :checksum "281bdb69e744789898be220ad3e15531abd72b6f")
         (helm-descbinds :checksum "6d5ddc11e6cef86548bd6b3e0d840112d602659c")
         (helm-ag :checksum "997107a53abd3bda06d52e7021c87527c5747389")
         (go-mode :checksum "d9647672717bb5d507de42975a337c738a0461a3")
