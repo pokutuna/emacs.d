@@ -36,6 +36,7 @@
 
 ;; basic keybinds
 (global-set-key (kbd "C-h") 'delete-backward-char) ;C-hでBS
+(define-key minibuffer-local-map (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-x ?") 'help-command) ;C-x ? をhelp-command
 
 
