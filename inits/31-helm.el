@@ -42,6 +42,7 @@
    helm-candidate-number-limit 200
    helm-quick-update t
    helm-buffer-max-length 35
+   helm-find-file-ignore-thing-at-point 1
    )
 
   ;; soruces
