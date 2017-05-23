@@ -12,15 +12,17 @@
     (flycheck-mode t)
     (setq flycheck-check-syntax-automatically '(save mode-enabled))
     (eldoc-mode t)
-    (company-mode +1))
+    (company-mode +1)
+    )
   (add-hook 'typescript-mode-hook 'my-ts-mode-hook)
 
-  ;; use project's tsserver if exists
-  (defun my-set-project-tsserver ()
-    (let ((project-tsserver-path (concat tide-project-root "node_modules/typescript/bin/tsserver")))
-      (when (file-exists-p project-tsserver-path)
-        (setq-local tide-tsserver-executable project-tsserver-path))
-      ))
-  (advice-add 'tide-start-server :before 'my-set-project-tsserver)
+  (setq tide-tsserver-executable "node_modules/typescript/bin/tsserver")
 
+  ;; use project's tsserver if exists
+  ;; (defun my-set-project-tsserver ()
+  ;;   (let ((project-tsserver-lib (concat tide-project-root "node_modules/typescript/lib/")))
+  ;;     (when (file-directory-p project-tsserver-lib)
+  ;;       (setq-local tide-tsserver-directory project-tsserver-lib)))
+  ;;     )
+  ;; (advice-add 'tide-start-server :before 'my-set-project-tsserver)
   )
