@@ -6,8 +6,13 @@
 (use-package go-mode
   :mode "\\.go$"
   :config
+
+  ;; go get -u github.com/nsf/gocode
   (use-package go-autocomplete)
   (add-hook 'go-mode-hook 'go-eldoc-setup)
+
+  ;; flycheck
+  (add-hook 'go-mode-hook 'flycheck-mode)
 
   (use-package smartchr
     :config

@@ -38,6 +38,7 @@
 (global-set-key (kbd "C-h") 'delete-backward-char) ;C-hでBS
 (define-key minibuffer-local-map (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-x ?") 'help-command) ;C-x ? をhelp-command
+(global-unset-key (kbd "M-t")) ; transpose-words 使いたいことない
 
 
 ;;; kill-ring & clipboard
