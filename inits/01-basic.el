@@ -65,6 +65,14 @@
   (or replace (not (string-blank-p string))))
 (advice-add 'kill-new :before-while 'my-kill-new-string-blank-p)
 
+;; 現在のファイルパスを kill-ring に入れる
+(defun kill-append-current-file-path ()
+    (interactive)
+    (kill-new (buffer-file-name))
+    (message "%s" (buffer-file-name))
+    )
+(define-key global-map (kbd "M-t") 'kill-append-current-file-path)
+
 
 ;;; window switch
 ;; C-c [hjkl] で window切り替え
