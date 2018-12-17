@@ -46,3 +46,4 @@
 ;; 9* : misc
 (el-get-bundle init-loader)
 (init-loader-load (locate-user-emacs-file "inits"))
+(put 'upcase-region 'disabled nil)

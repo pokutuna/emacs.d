@@ -45,7 +45,10 @@
 ;; TODO check with flymake
 (el-get-bundle scss-mode)
 (use-package scss-mode
-  :mode "\\.scss$")
+  :mode "\\.scss$"
+  :config
+  (setq css-indent-offset 2)
+  )
 
 ;; less
 (el-get-bundle less-css-mode)

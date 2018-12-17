@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((magit-popup :checksum "a0b22e30d135d4f83a9227b3fa13b1377f9be0df")
+      '((plantuml-mode :checksum "b358a53bb0ab195f0193169d0d6869a3ef2c543e")
+        (magit-popup :checksum "a0b22e30d135d4f83a9227b3fa13b1377f9be0df")
         (ghub :checksum "4831933da059ee084a16016558b9ccd8c581a8ff")
         (auto-virtualenvwrapper :checksum "e2628408d4e67e1b1714cf7682cff9405e735c81")
         (virtualenvwrapper :checksum "fa49954d44cb47a46d7a2bd8566ea21dd0823dea")
