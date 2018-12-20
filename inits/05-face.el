@@ -30,8 +30,12 @@
 (show-paren-mode t) ;カッコ強調表示
 (setq show-paren-delay 0) ;カッコ強調表示ディレイ0
 (setq show-paren-style 'expression) ;カッコ内強調表示
-(set-face-background 'show-paren-match-face nil) ;カッコ内背景強調オフ
-(set-face-underline-p 'show-paren-match-face "yellow") ;カッコ内アンダーライン
+(set-face-attribute
+ 'show-paren-match nil
+ :background (face-attribute 'default :background) ;カッコ内背景強調オフ
+ :underline "yellow"                               ;カッコ内アンダーライン
+ )
+
 
 ;; カーソル縦軸ハイライト
 (el-get-bundle col-highlight)
