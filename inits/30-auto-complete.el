@@ -49,7 +49,7 @@
 ;; company
 ;; auto-complete メインで使う
 ;; 最近のプログラミング言語サポート package は company を要求することがあるので補助的に使う
-(el-get-bundle company)
+(el-get-bundle company-mode)
 (use-package company
   :bind (:map company-mode-map
          ("M-i" . company-complete)

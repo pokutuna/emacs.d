@@ -4,11 +4,7 @@
 
 ;; lispxmp
 ;; add result after `; =>`
-(el-get-bundle lispxmp)
-(use-package lispxmp
-  :bind (:map emacs-lisp-mode-map
-              ("C-c C-d" . lispxmp)))
-
+;; removed
 
 ;; paredit
 (el-get-bundle paredit)

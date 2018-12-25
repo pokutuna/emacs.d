@@ -77,7 +77,8 @@
 (el-get-bundle magit)
 
 ;; jaunte.el
-(el-get-bundle jaunte)
+(el-get-bundle jaunte
+  :url "https://github.com/kawaguchi/jaunte.git")
 (use-package jaunte
   :bind (("C-c C-j" . jaunte)
          ("M-z" . jaunte)))

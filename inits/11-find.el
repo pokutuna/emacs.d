@@ -6,9 +6,9 @@
 
 ;; grep-edit
 ;; C-c C-e で編集を反映 C-x s ! で全部保存
-(el-get-bundle grep-edit
-  :features grep-edit
-)
+;; (el-get-bundle grep-edit
+;;   :features grep-edit
+;; )
 
 ;; moccur
 ;; (removed)

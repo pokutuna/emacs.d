@@ -2,7 +2,7 @@
 (el-get-bundle popwin)
 (use-package popwin
   :config
-  (setq display-buffer-function 'popwin:display-buffer)
+  (popwin-mode)
   (setq popwin:popup-window-height 0.5)
 
   ;; helm
