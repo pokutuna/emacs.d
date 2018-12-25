@@ -16,6 +16,8 @@
     )
   (add-hook 'typescript-mode-hook 'my-ts-mode-hook)
 
+  (setq typescript-indent-level 2)
+
   (setq tide-tsserver-executable "node_modules/typescript/bin/tsserver")
 
   ;; use project's tsserver if exists
