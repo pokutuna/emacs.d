@@ -18,7 +18,7 @@
           ruby-deep-indent-paren-style nil) ;C-M-\ でindentととのえる
 
     (use-package parenthesis
-      (parenthesis-register-keys "(\"['" ruby-mode-map))
+      :config (parenthesis-register-keys "(\"['" ruby-mode-map))
 
     (use-package smartchr
       :config
